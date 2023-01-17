@@ -16,7 +16,7 @@ body {
 
     min-height: 100vh;
     
-    background: #1f45eca2;
+    background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%);
 }
 
 .box {
@@ -29,8 +29,20 @@ body {
 }
 
 @keyframes animate {
-    0% {
+    0%{
         transform: rotateX(-20deg) rotateY(360deg);
+    }
+    20%{
+        transform: rotateX(-10deg) rotateY(288deg);
+    }
+    40%{
+        transform: rotateX(-0deg) rotateY(216deg);
+    }
+    60%{
+        transform: rotateX(-0deg) rotateY(144deg);
+    }
+    80%{
+        transform: rotateX(-10deg) rotateY(72deg);
     }
     100%{
         transform: rotateX(-20deg) rotateY(0deg);
@@ -53,15 +65,15 @@ body {
     width: 200px;
     height: 100px;
 
-    background: pink;
+    background: #e8198b8e;
 
     transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .box:hover div.block span{
     background: white;
-    filter: drop-shadow(0 0 50px white)
+    filter: drop-shadow(10px 0 10px white)
 }
 
 .box div.text span {
@@ -109,21 +121,6 @@ body {
     filter: blur(5px);
 
     -webkit-text-stroke: 3px #00000017;
-}
-
-.box div.text span::after {
-    content: '';
-
-    position: absolute;
-
-    top: 100px;
-    width: 360px;
-    height: 60px;
-
-    background-color: pink;
-
-    transform: rotateX(-90deg);
-    transition: 0.5s;
 }
 
 .box:hover div.text span::after {
